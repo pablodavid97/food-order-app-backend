@@ -82,7 +82,7 @@ app.use((req, res, next) => {
     if (req.method === 'OPTIONS') {
         res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
         res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-        return res.status(200).end();
+        res.status(200).end();
     }
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
